@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Preprocessed Crypto Data</title>
+</head>
+<body>
+    <h1>Preprocessed Data for {{ crypto }}</h1>
+    <table border="1">
+        <tr>
+            <th>Time</th>
+            <th>Close</th>
+            <th>SMA_10</th>
+            <th>EMA_10</th>
+            <th>RSI</th>
+            <th>MACD</th>
+        </tr>
+        {% for row in data %}
+        <tr>
+            <td>{{ row.Time }}</td>
+            <td>{{ row.Close }}</td>
+            <td>{{ row.SMA_10 }}</td>
+            <td>{{ row.EMA_10 }}</td>
+            <td>{{ row.RSI }}</td>
+            <td>{{ row.MACD }}</td>
+        </tr>
+        {% endfor %}
+    </table>
+</body>
+</html>

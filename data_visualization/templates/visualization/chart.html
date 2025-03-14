@@ -1,0 +1,16 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Crypto Price Chart</title>
+    <script src="https://cdn.plot.ly/plotly-latest.min.js"></script>
+</head>
+<body>
+    <h1>Crypto Price Chart</h1>
+    <div id="chart"></div>
+
+    <script>
+        var chartData = {{ chart_json|safe }};
+        Plotly.newPlot('chart', chartData);
+    </script>
+</body>
+</html>
